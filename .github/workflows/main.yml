@@ -32,7 +32,7 @@ jobs:
 
       - name: Run TLS scan
         run: |
-          ./CloudflareST -cfcolo NYC,SFO,LAX,SEA,SJC,DFW,ORD,HKG -sl 5 -tl 300 -n 100 -url https://speed.cloudflare.com/__down?bytes=6857600
+          ./CloudflareST -cfcolo LAX,SEA,SJC,DFW,ORD,HKG,NYC,SFO -sl 9 -dn 20 -tl 100 -n 100 -url https://speed.cloudflare.com/__down?bytes=6857600
           python convert_csv_to_tls.py
 
       - name: Commit and push changes
